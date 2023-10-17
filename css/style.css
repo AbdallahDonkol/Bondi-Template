@@ -12,8 +12,8 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 .mainBtn{
-    background-color: #ff3150;
-    color: #ffc400;
+    background-color: var(--pink-color);
+    color: var(--yellow-color);
     font-size: 17px;
     font-weight: 500;
     padding: 10px;
@@ -22,6 +22,7 @@ body{
 .mainBtn:hover{
     background-color: #19283f;
     border-color: #33d1cc;
+    
 }
 .special-heading::before{
     content: "";
@@ -48,7 +49,8 @@ body{
 }
 .navbar .navbar-toggler{
     color: white;
-    border: none;
+    border: 1px solid var(--green-color);
+
 }
 .navbar .navbar-toggler:focus{
     box-shadow: none;
@@ -57,11 +59,15 @@ body{
     caret-color: var(--green-color);
     width: 60%;
     border-radius: 15px;
-    display: none;
+    visibility: hidden;
 }
 .navbar form input[type='search']:focus{
     box-shadow: none;
 }
+.navbar form{
+    margin-right: -40px;
+}
+
 /* end navbar */
 /* start landing  */
 .landing{
@@ -70,6 +76,54 @@ body{
 }
 .landing button a{
     color: var(--yellow-color);
+}
+.landing .popup{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(183, 230, 228, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.landing .popup .popup-content{
+    height: 300px;
+    width: 500px;
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.landing .popup svg{
+    color: var(--yellow-color);
+    background-color: var(--pink-color);
+    border-radius: 50%;
+    padding: 15px;
+}
+.landing .popup form{
+    color: var(--green-color);
+    font-weight: 500;
+}
+.landing .popup form input{
+    border: 1px solid var(--dark-color);
+    border-radius: 8px;
+    padding: 5px;
+    caret-color: var(--green-color);
+}
+.landing .popup form input:focus{
+    outline: none;
+}
+@media(max-width:767px){
+    .landing .popup .popup-content{
+        max-width: 90%;
+    }
 }
 /* end landing  */
 /* start features */
