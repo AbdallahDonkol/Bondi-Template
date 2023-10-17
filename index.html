@@ -19,16 +19,16 @@
 </head>
 <body>
     <!-- start navbar  -->
-    <nav class="navbar navbar-expand-lg sticky-top" >
+    <nav class="navbar navbar-expand-lg" >
         <div class="container">
             <a class="navbar-brand" href="#home"><img src="images/logo.png" alt="logo"></a>
-            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler " id="navToggler" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="main">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                <a class="nav-link active  pt-3 pb-3 p-lg-3" aria-current="page" href="#home">Home</a>
+                <a class="nav-link active  pt-3 pb-3 p-lg-3" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link  pt-3 pb-3 p-lg-3" href="#services">Services</a>
@@ -40,25 +40,47 @@
                 <a class="nav-link  pt-3 pb-3 p-lg-3" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link pt-3 pb-3 p-lg-3" href="#contact">Contact</a>
-                    </li>
+                <a class="nav-link pt-3 pb-3 p-lg-3" href="#contact">Contact</a>
+                </li>
             </ul>
             <form class="d-lg-flex d-none" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="mainBtn rounded-pill " type="submit">Search</button>
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="formControl">
+                <button id="searchBtn" class="mainBtn rounded-pill " type="button">Search</button>
             </form>
-                <button type="button" class="mainBtn rounded-pill ms-lg-3">Login</button>
+                <button type="button" id="login" class=" login mainBtn rounded-pill ms-lg-3">Login</button>
             </div>
         </div>
         </nav>
         <!-- end navbar  -->
         <!-- start landing  -->
         <div class="landing d-flex justify-content-center align-items-center">
-            <div class="content text-light text-center">
-                <h1 class="fs-1 mb-2">Taste the Creativity</h1>
-                <p class="fs-6 text-white-50 mb-5 fw-bold">We make awesome graphic and web design</p>
-                <button type="button" class="mainBtn rounded-pill"><a href="#services" class="text-decoration-none">Get Started</a></button>
+            <div class="container">
+                <div class="content text-light text-center">
+                    <h1 class="fs-1 mb-2">Taste the Creativity</h1>
+                    <p class="fs-6 text-white-50 mb-5 fw-bold">We make awesome graphic and web design</p>
+                    <button type="button" class="mainBtn rounded-pill"><a href="#portfolio" class="text-decoration-none">Get Started</a></button>
+                </div>
+                <div class="popup" id="popup">
+                    <div class="popup-content" id="popContent">
+                        <i class="fa-solid fa-user-tie mb-4 mt-0 fs-1"></i>
+                        <form class="text-center" >
+                            <table>
+                                <tr class="d-flex justify-content-center">
+                                    <td class="me-3"><label for="user">Your Email</label></td>
+                                    <td><input type="email" name="email" id="user" placeholder="user@email.com" class="mb-4"><br></td>
+                                </tr>
+                                <tr class="d-flex justify-content-center">
+                                    <td class="me-3"><label for="pass">Password</label></td>
+                                    <td><input type="password" name="password" id="pass" placeholder="enter your password"></td>
+                                </tr>
+                            </table>                        
+                        </form>
+                        <button type="button" class="userLog mainBtn rounded-pill ms-lg-3 mt-4 w-25">Login</button>
+                    </div>
+                </div>
             </div>
+            
+            
         </div>
         <!-- end landing  -->
         <!-- start features -->
@@ -365,5 +387,6 @@
         <!-- end footer -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/all.min.js"></script> <!--will render the icon as svg icon-->
+    <script src="js/main.js"></script>
 </body>
 </html>
